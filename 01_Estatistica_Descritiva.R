@@ -36,3 +36,7 @@ hist(pesos)
 
 outliers = boxplot.stats(pesos)$out # pega os outliers
 outliers
+
+# Remover os outliers criando um novo vetor sem eles
+pesos_sem_outliers = pesos[!pesos %in% outliers]
+pesos_sem_outliers
